@@ -24,13 +24,13 @@
         {% for news in news_list %}
             <tr>
                 <td>
-                    {{ news.title }}
+                    {{ news.title|censor }}
                 </td>
                 <td>
                     {{ news.dateCreation|date:'d.m.Y' }}
                 </td>
                 <td>
-                    {{ news.text|truncatechars:50 }}
+                    {{ news.text|truncatechars:50|censor }}
                 </td>
             </tr>
         {% endfor %}
