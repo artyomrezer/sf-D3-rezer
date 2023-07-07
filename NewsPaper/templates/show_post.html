@@ -21,13 +21,13 @@
     </tr>
     <tr>
         <td>
-            {{ show_post.title }}
+            {{ show_post.title|censor }}
         </td>
         <td>
             {{ show_post.dateCreation|date:'d.m.Y' }}
         </td>
         <td>
-            {{ show_post.text }}
+            {{ show_post.text|censor }}
         </td>
     </tr>
 </table>
